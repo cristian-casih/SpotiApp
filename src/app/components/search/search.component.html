@@ -1,0 +1,7 @@
+<div class="input-group mb-3">
+        <div class="input-group-prepend">
+        </div>
+        <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar Artista...">
+      </div>
+<app-loading class="m-5" *ngIf="loading"></app-loading>
+<app-tarjetas *ngIf="!loading" [items]="artistas" ></app-tarjetas>
